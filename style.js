@@ -1,26 +1,31 @@
-git add .let price = document.querySelectorAll('.price');
-//console.log(price);
+let price = document.querySelectorAll('.price');
 let sumPrice = 0;
-for(let i = 0; i < price.length; i++) {
-  sumPrice += Number(price[i].innerHTML);
+for (let i = 0; i < price.length; i++) {
+  sumPrice += +(price[i].innerHTML);
 }
-//console.log(sumPrice);
-let cartSum = document.querySelector('.cart_sum');
-//console.log(cartSum);
+
+//console.log(sumPrice)
+let cartSum = document.querySelector("#cart_sum");
 cartSum.innerHTML = sumPrice;
-let discountSum
-function discount () {
-  //discountSum = Number(sumPrice) - Number(sumPrice) * 0.2;
-  return discountSum;
-}
-console.log(discountSum);
-discountSum = discount;
-//console.log(discountSum);
-document.getElementById('use').onclick = function () {
+
+//price.forEach(function(element) {
+  //console.log(element.textContent);
+  //});
+
+document.getElementById("button").onclick = function () {
+  //price.forEach(function(element) {
+  //+(element.textContent) * 0.8
+  //console.log(price)
+   // });
+  
+  let discountSum = sumPrice * 0.8;
   cartSum.innerHTML = discountSum;
-  return cartSum;
+  return cartSum
 }
-console.log(cartSum);
+
+
+
+
 
 
 
